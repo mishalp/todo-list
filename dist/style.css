@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding-right: 0;
+}
+
+.nav{
+    background-color: #1d4ed8;
+    padding: 2rem;
+    width: 100%;
+    box-shadow: 0 3px 8px -2px gray;
+    
+}
+
+.nav > h1{
+    color:white;
+    font-weight: 800;
+    font-family: sans-serif;
+    font-size: 2rem;
+}
+
+.side-bar{
+    background-color: #93c5fd;
+    padding: 1rem;
+    padding-right: 5rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+
+.side-bar > ul, .projects > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-left: 1rem;
+    width: 11rem;
+}
+
+.side-bar > ul > li, .projects > ul > li{
+    padding: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+}
+
+.side-bar > ul > li:hover, .projects > ul > li:hover{
+ 
+    box-shadow: 0 3px 8px -2px gray;
+    border-radius: 1rem;
+}
+
+.projects > ul{
+    margin-top: .5rem;
+}
+
+.projects > button{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.container{
+    display: flex;
+}
+
+.main{
+    padding: 2rem 5rem;
+    width: 60%;
+}
+
+.lists{
+    margin: 2rem;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.lists > ul > li > span{
+    font-size: 1.5rem;
+}
+
+.lists > ul{
+    list-style: none;
+    width: 100%;
+
+}
+
+.lists > ul > li{
+    padding: .5rem;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lists > ul > li > .radio{
+    cursor: pointer;
+    padding: 10px;
+    font-weight: 900;
+    font-size: 1rem;
+    border-radius: 50%;
+}
+
+.lists > ul > li > p{
+    flex: 1;
+}
+
+.selected{
+    background-color: rgba(255, 255, 255, 0.31);
+    border-radius: 1rem;
+    box-shadow: 0 3px 8px -2px gray;
+}
+
+.projects > button, .task-btn{
+    padding: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.projects > button:hover, .task-btn:hover{
+    border: 1px solid black;
+}
+
+#task > li {
+    border: 1px solid grey;
+    margin: .5rem;
+}
+
+#task > li:hover {
+    box-shadow: 0 3px 8px -2px gray;
+}
+
