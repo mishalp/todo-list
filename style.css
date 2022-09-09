@@ -102,7 +102,6 @@
 .lists > ul > li > .radio{
     cursor: pointer;
     padding: 10px;
-    font-weight: 900;
     font-size: 1rem;
     border-radius: 50%;
 }
@@ -137,3 +136,6 @@
     box-shadow: 0 3px 8px -2px gray;
 }
 
+.disable{
+    display: none;
+}
