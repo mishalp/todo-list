@@ -55,6 +55,17 @@
     margin-top: .5rem;
 }
 
+.projects > ul > li > button{
+    padding: .2rem .4rem;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+.projects > ul > li > button:hover{
+    border: 1px solid black;
+
+} 
+
 .projects > button{
     margin-left: 2rem;
     margin-top: 1rem;
