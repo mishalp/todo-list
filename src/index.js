@@ -20,6 +20,11 @@ const toggle = ()=>{
             Dom.displayTasks()
             var title = document.getElementById('title')
             title.innerHTML = tabs[tabIndex];
+            if(i > 0 && i < 3 ){
+                document.getElementById('task-btn').classList.add('disable')
+            }else{
+                document.getElementById('task-btn').classList.remove('disable')
+            }
 
         }
     })
@@ -34,6 +39,7 @@ var projects = [];
 var proObj = {};
 proObj[tabs[tabIndex]] = [];
 proObj['Today'] = [];
+proObj['This week'] = [];
 
 if(localStorage){
 

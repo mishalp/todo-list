@@ -148,3 +148,6 @@
     box-shadow: 0 3px 8px -2px gray;
 }
 
+.disable{
+    display: none;
+}
