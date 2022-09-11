@@ -6,6 +6,12 @@ const toggle = ()=>{
             return
         }
         btn.onclick = (e)=>{
+            if(e.composedPath()[0].classList.contains('selected') && prevTab.classList.contains('selected')){
+                return
+            }
+            if(e.composedPath()[0].classList.contains('selected')){
+                return
+            }
             e.composedPath()[0].classList.add('selected');
             prevTab.classList.remove('selected');
             prevTab = e.composedPath()[0];
@@ -77,6 +83,8 @@ const Todo = (()=>{
         proObj[name] = [];
         tabs.push(name);
         projects.push(name);
+        localStorage.setItem(name,  JSON.stringify(proObj[name]))
+        console.log(proObj);
         Dom.displayPr()
     }
 
@@ -95,7 +103,23 @@ const Todo = (()=>{
 
         })
     }
-    return {addTask, dltTaskListner, Listeners, addProject}
+
+    const dltPr = ()=>{
+        var btns = document.querySelectorAll('.dlt-pr')
+        btns.forEach((btn, index)=>{
+            if(btn.onclick){
+                return
+            }
+            btn.onclick = ()=>{
+                var dlt = projects.splice(index,1)
+                delete proObj[dlt]
+                localStorage.removeItem(dlt)
+                console.log(proObj);
+                Dom.displayPr()
+            }
+        })
+    }
+    return {addTask, dltTaskListner, Listeners, addProject, dltPr}
 })()
 
 
@@ -138,10 +162,12 @@ const Dom = (()=>{
             li.classList.add('side-list')
             var btn = document.createElement('button');
             btn.innerHTML = "X";
+            btn.classList.add('dlt-pr')
             li.appendChild(btn)
             container.appendChild(li);
         })
         toggle()
+        Todo.dltPr()
     }
 
     const displayTasks = ()=>{
