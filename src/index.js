@@ -69,6 +69,10 @@ const Todo = (()=>{
     const addTask = ()=>{
         var name = document.getElementById('task-name').value;
         var date = document.getElementById('task-date').value;
+        if(name == "" || date == ""){
+            alert("fields cannot be empty")
+            return
+        }
         var task = createTask(name, date);
         
         proObj[tabs[tabIndex]].push(task);
@@ -86,6 +90,10 @@ const Todo = (()=>{
 
     const addProject = ()=>{
         var name = document.getElementById('pr-name').value;
+        if(name == ""){
+            alert("fields cannot be empty")
+            return
+        }
         proObj[name] = [];
         tabs.push(name);
         projects.push(name);
